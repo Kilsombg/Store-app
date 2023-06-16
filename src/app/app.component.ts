@@ -25,6 +25,18 @@ export class AppComponent {
         "desc",
         519
       ),
+      new Item(
+        'https://laptop.bg/system/images/381495/medium/lenovo_ideapad_1_15_82LX006FBM.png',
+        'Lenovo IdeaPad 1 15"',
+        "desc",
+        519
+      ),
+      new Item(
+        'https://laptop.bg/system/images/381495/medium/lenovo_ideapad_1_15_82LX006FBM.png',
+        'Lenovo IdeaPad 1 15"',
+        "desc",
+        519
+      ),
       ]
   }
 }
