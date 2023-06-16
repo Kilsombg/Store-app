@@ -1,5 +1,5 @@
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3,min-content);
+    grid-template-columns: repeat(3,auto);
     column-gap: 1.5em;
 }

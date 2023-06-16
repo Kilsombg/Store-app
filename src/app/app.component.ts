@@ -4,7 +4,9 @@ import { Item } from './item/item.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css',
+              '../assets/styles/page-grid.css'    
+]
 })
 export class AppComponent {
   title = 'store-web-app';
