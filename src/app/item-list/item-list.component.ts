@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ItemsService } from '../services/items.service';
+import { Item } from '../item/item.model';
 
 @Component({
   selector: 'app-item-list',
@@ -16,6 +17,7 @@ constructor(public itemsService: ItemsService){
     .subscribe();
   }
 
-public onSubmit(form: any){
+public onSubmit(form: Item){
+  this.itemsService.addOneItem(form);
 }
 }

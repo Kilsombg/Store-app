@@ -10,7 +10,7 @@ export class ItemsService {
     constructor(private http: HttpClient) {}
 
     public addOneItem(newItem: Item){
-        console.log(newItem);
+        this.http.post('https://localhost:7041/api/laptop', newItem).subscribe();
     }
 
     public loadAllItems() {
