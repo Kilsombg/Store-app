@@ -13,16 +13,10 @@ export class ItemsService {
         console.log(newItem);
     }
 
-    public getAllItems() {
+    public loadAllItems() {
         return this.http.get<Item[]>('https://localhost:7041/api/laptop')
         .pipe(map(data => {
             this.items = data;
-            console.log('observable data: ', data);
         }));
-    }
-
-    public getItems() : Item[]{
-        this.getAllItems().subscribe(data => console.log(data));
-        return this.items;
     }
 }

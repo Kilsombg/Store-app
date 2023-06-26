@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { Item } from '../item/item.model';
+import { Component, Input, OnInit } from '@angular/core';
 import { ItemsService } from '../services/items.service';
 
 @Component({
@@ -8,17 +7,15 @@ import { ItemsService } from '../services/items.service';
   styleUrls: ['./item-list.component.css',
   '../../assets/styles/item-list-grid.css']
 })
-export class ItemListComponent {
-@Input() items: Item[];
+export class ItemListComponent implements OnInit{
 
 constructor(public itemsService: ItemsService){
 }
+  ngOnInit(): void {
+    this.itemsService.loadAllItems()
+    .subscribe();
+  }
 
 public onSubmit(form: any){
-  // this.itemService.addOneItem(form);
-  // this.items.at(0).description = 'changed';
-
-  this.items = this.itemsService.getItems();
-  var a = 3;
 }
 }
